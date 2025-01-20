@@ -6,8 +6,7 @@ import lombok.*;
 
 @Entity(name = "Curso")
 @Table(name = "cursos")
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Setter
 @Getter
 @EqualsAndHashCode(of = "id")
@@ -22,5 +21,27 @@ public class Curso {
     public Curso(DatosCursoDTO curso) {
         this.nombre = curso.nombre();
         this.categoria = Categoria.valueOf(curso.categoria());
+    }
+
+    public Curso(){
+
+    }
+
+    public Curso(long id, String nombre, Categoria categoria) {
+        this.id = id;
+        this.nombre = nombre;
+        this.categoria = categoria;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
     }
 }

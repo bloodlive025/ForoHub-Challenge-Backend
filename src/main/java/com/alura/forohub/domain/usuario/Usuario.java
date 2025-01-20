@@ -24,7 +24,7 @@ public class Usuario implements UserDetails {
 
   public Usuario(DatosRegistroUsuariosDTO datosRegistroUsuariosDTO) {
     this.nombre = datosRegistroUsuariosDTO.nombre();
-    this.correo_electronico = datosRegistroUsuariosDTO.correo_electronico();
+    this.correo_electronico = datosRegistroUsuariosDTO.correoElectronico();
     this.contrasena = datosRegistroUsuariosDTO.contrasena();
   }
 

@@ -8,7 +8,7 @@ public record DatosRegistroUsuariosDTO(
         String nombre,
         @NotBlank
         @Email
-        String correo_electronico,
+        String correoElectronico,
         @NotBlank
         String contrasena
 ) {
